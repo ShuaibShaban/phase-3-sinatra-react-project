@@ -42,7 +42,6 @@ class ApplicationController < Sinatra::Base
       category: params[:category],
       year: params[:year],
       rating: params[:rating],
-      image_url: params[:image_url],
       user_id: params[:user_id]
     )
     new_movie.to_json
@@ -81,7 +80,6 @@ class ApplicationController < Sinatra::Base
       category: params[:category],
       year: params[:year],
       rating: params[:rating]
-      image_url: params[:image_url]
     )
     movie.to_json
   end
