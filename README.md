@@ -9,9 +9,9 @@ Pre-Requisites
 In order to use this repository you will need the following:
 
 - Operating System (Windows 10+, Linux 3.8+, or MacOS X 10.7+)
-- RAM >= 4GB
-- Free Space >= 2GB
+
 - Built With
+
 - This application has been built with the following tools:
 
 - ruby sqlite
@@ -28,7 +28,7 @@ Setup
 You can setup this repository by following this manual
 
 ### Clone the repository
-- git clone     git@github.com:ShuaibShaban/phase-3-sinatra-react-project.git
+- git clone   git@github.com:ShuaibShaban/phase-3-sinatra-react-project.git
 
 - cd  phase-3-sinatra-react-project
 
