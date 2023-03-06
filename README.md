@@ -29,11 +29,23 @@ You can setup this repository by following this manual
 
 ### Clone the repository
 - git clone     git@github.com:ShuaibShaban/phase-3-sinatra-react-project.git
+
+- cd  phase-3-sinatra-react-project
+
 - Ensure the ruby gems are setup in your machine
--bundle install
+
+-  bundle install
+
 -Perform any pending database migrations
--rake db:migrate
+
+- To create migrations run  rake db:create_migration NAME=
+
+-To run the migration
+
+-   rake db:migrate
+
 -Run the application
+
 -rake server
 
 Open the application from your browser
