@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem 'sinatra-cross_origin', '~> 0.4.0'
+
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
 gem "sinatra", "~> 2.1"
@@ -15,6 +17,8 @@ gem "sinatra-activerecord"
 # Rack middleware. Used specifically for parsing the request body into params.
 # https://github.com/rack/rack-contrib
 gem "rack-contrib", "~> 2.3"
+
+gem "rack-cors", "~> 2.0"
 
 # Run common tasks from the command line
 # https://github.com/ruby/rake
@@ -39,6 +43,8 @@ group :development do
   gem "rerun"
 
   gem "pry"
+
+
 end
 
 # These gems will only be used when we are running tests

@@ -39,6 +39,8 @@ GEM
     rack (2.2.3)
     rack-contrib (2.3.0)
       rack (~> 2.0)
+    rack-cors (2.0.0)
+      rack (>= 2.0.0)
     rack-protection (2.1.0)
       rack
     rack-test (1.1.0)
@@ -73,6 +75,7 @@ GEM
     sinatra-activerecord (2.0.23)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
+    sinatra-cross_origin (0.4.0)
     sqlite3 (1.4.2)
     tilt (2.0.10)
     tzinfo (2.0.4)
@@ -89,6 +92,7 @@ DEPENDENCIES
   faker (~> 2.18)
   pry
   rack-contrib (~> 2.3)
+  rack-cors (~> 2.0)
   rack-test (~> 1.1)
   rake
   require_all
@@ -97,6 +101,7 @@ DEPENDENCIES
   rspec-json_expectations (~> 2.2)
   sinatra (~> 2.1)
   sinatra-activerecord
+  sinatra-cross_origin (~> 0.4.0)
   sqlite3 (~> 1.4)
 
 BUNDLED WITH
