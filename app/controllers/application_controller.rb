@@ -1,6 +1,6 @@
 class ApplicationController < Sinatra::Base
-  set default_content_type: "application/json"
-
+  set :default_content_type, 'application/json'
+  # Add your routes here
   get "/" do
     "we are here"
   end
@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
     @message = {error: "Invalid username or password"}
     return @message.to_json
   end
-  
+
   # create a user account with username, password and email
   post '/newuser' do
     new_user = User.create(
@@ -36,15 +36,14 @@ class ApplicationController < Sinatra::Base
   end
 
   # create a new movie
-  post '/newmovie' do
-    new_movie = Movie.create(
+  post '/newmovie/:id' do
+    movie = User.find(params[:id]).movies.create(
       title: params[:title],
-      category: params[:category],
+      genre: params[:genre],
       year: params[:year],
       rating: params[:rating],
-      user_id: params[:user_id]
     )
-    new_movie.to_json
+    movie.to_json
   end
 
   # get a given users movies
@@ -55,38 +54,33 @@ class ApplicationController < Sinatra::Base
   end
 
   # view all movies
-  get '/movies' do
-    movies = Movie.all
-    movies.to_json
+  get '/movies' do "rating"
+    movies = Movie.all.to_json
   end
 
   # search for a given movie
   get '/search/:term' do
     term = params[:term]
-    movie = Movie.find_by(year: term.to_i) ||  Movie.find_by(title: term)
+    movie = Movie.where(year: term.to_i) ||  Movie.find_by(title: term)
     if movie
       return movie.to_json    
     else
       error_message = {error: "Could not find movie that matches search term"} 
       return error_message.to_json     
     end
-  end  
+  end
 
-  # update a movies details
-  patch '/edit/:id' do
-    movie = Movie.find(params[:id])
-    movie.update(
-      title: params[:title],
-      category: params[:category],
-      year: params[:year],
-      rating: params[:rating]
-    )
+   # update a movie's details
+  patch '/edit/:id/:id2' do
+    data = JSON.parse(request.body.read)
+    movie = User.find(params[:id]).movies
+    movie.find(params[:id2]).update(data)
     movie.to_json
   end
 
   # delete a movie from the site
-  delete '/delete/:id' do
-    movie = Movie.find(params[:id])
+  delete '/delete/:id/:id2' do
+    movie = User.find(params[:id]).movies.find(params[:id2])
     movie.destroy
   end
 
