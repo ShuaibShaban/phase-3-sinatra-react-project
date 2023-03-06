@@ -28,9 +28,12 @@ Setup
 You can setup this repository by following this manual
 
 ### Clone the repository
-- git clone   git@github.com:ShuaibShaban/phase-3-sinatra-react-project.git
+- git clone  
 
-- cd  phase-3-sinatra-react-project
+   git@github.com:ShuaibShaban/phase-3-sinatra-react-project.git
+
+- cd  
+    phase-3-sinatra-react-project
 
 - Ensure the ruby gems are setup in your machine
 
@@ -83,7 +86,9 @@ Open the application from your browser
 
 /movies/delete/:id - Delete a TODO item.
 
-/ - Render a table of all movies using BCSS
+
+
+/ - Render a table of all movies using CSS
 
 LICENSE
 This repository is distributed under the MIT License
