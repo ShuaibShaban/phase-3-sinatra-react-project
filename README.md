@@ -62,7 +62,7 @@ Open the application from your browser
 
 ## REQUEST BODY
 {
- "title": "All AMerican",
+ "title": "All American",
  "description": "When a star high school football player from South Central is recruited to play for Beverly Hills High School, two separate worlds collide.",
  "image_url": "https://flxt.tmsimg.com/assets/p15533660_b_v13_ad.jpg",
  "due": "2023-06-09"
