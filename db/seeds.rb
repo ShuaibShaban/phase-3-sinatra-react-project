@@ -1,11 +1,11 @@
 puts "🌱 Seeding users, Please wait..."
 
-10.times do
-    user = User.create(
-        username: Faker::Internet.username,
-        password: Faker::Internet.password,
-        email: Faker::Internet.email
-    )
+# 10.times do
+#     user = User.create(
+#         username: Faker::Internet.username,
+#         password: Faker::Internet.password,
+#         email: Faker::Internet.email
+#     )
   
     # rand(1..5).times do
     #     movie = Movie.create(
@@ -18,7 +18,7 @@ puts "🌱 Seeding users, Please wait..."
     #     )
     # end
 
-end
+# end
 Movie.create([
     {
     title: "John Wick",
